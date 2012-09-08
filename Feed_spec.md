@@ -2,7 +2,7 @@ Feed spec:
 A user’s ‘feed’ of posts will be posted at the above-mentioned feed URL. A feed-URL *MAY* be publically accessible without authentication, it *MAY* be accessible using HTTP authentication of some sort (as above), and it *MUST* be accessible when requested along with a correct ‘key’ (later?)
 
 A feed is a JSON object of posts as follows:
-```
+```Js
 {
 	continuation-url: “http://<somedomain>/path/element/?nexttoken=abcdefg”,
 posts: [
@@ -23,7 +23,7 @@ Each entry must consist of at least a “time” and “text” element. Additio
 (optional) A feed resource *MAY* return a 307 (temporary redirect) message if a client has made too many requests of the server. A feed resource may even return this upon the first request. The client should take the provided location: url as a batch-fetch URL, and should assemble all usernames (other than the ones previously retrieved) into a JSON array, then POST that array to the given batch-fetch URL. The client *SHOULD* set a ‘limit’ as part of its request, but the server will set one if the client does not. (Should this be 300 status instead? It’s moving from GET to POST and all kinds of other things are happening.) If the feed resource does not support batch-fetch, it should never return this status.
 
 Batch fetch JSON format:
-```
+```js
 {
 	“usernames”: [“joe”,”jane”,”bob”,”bill”,”george”],
 	“limit”: 100
