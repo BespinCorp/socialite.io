@@ -15,12 +15,12 @@ a friend-entry looks as follows:
 a friend-list is a collection of such key-hash pairs, such as:
 ```js
 {
-	"abcde": {
-	"url": "http://adomain.com/",
-	"key": "whatever"
+	"friend_id_1": {
+		"url": "http://adomain.com/",
+		"key": "whatever"
 	},
-	"bcdefg": {
-		url: "http://someotherdomain/some/user/name",
+	"friend_id_2": {
+		"url": "http://someotherdomain/some/user/name",
 		"key": "some_other_key"
 	}
 }
