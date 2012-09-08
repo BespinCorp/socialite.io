@@ -2,19 +2,19 @@ Feed spec:
 A user’s ‘feed’ of posts will be posted at the above-mentioned feed URL. A feed-URL *MAY* be publically accessible without authentication, it *MAY* be accessible using HTTP authentication of some sort (as above), and it *MUST* be accessible when requested along with a correct ‘key’ (later?)
 
 A feed is a JSON object of posts as follows:
-```Js
+```js
 {
-	continuation-url: “http://<somedomain>/path/element/?nexttoken=abcdefg”,
-posts: [
-	{
-		“time”: “2012-09-03T01:00:12Z”,
-		“text”: “I am eating a sandwich”
-	},
-	{
-		“time”: “2012-09-03T00:00:13Z”,
-		“text”: “I am going to eat a sandwich”
-	}
-]
+	"continuation-url": "http://<somedomain>/path/element/?nexttoken=abcdefg",
+	"posts": [
+		{
+			"time": "2012-09-03T01:00:12Z",
+			"text": "I am eating a sandwich"
+		},
+		{
+			"time": "2012-09-03T00:00:13Z",
+			"text": "I am going to eat a sandwich"
+		}
+	]
 }
 ```
 
@@ -25,8 +25,8 @@ Each entry must consist of at least a “time” and “text” element. Additio
 Batch fetch JSON format:
 ```js
 {
-	“usernames”: [“joe”,”jane”,”bob”,”bill”,”george”],
-	“limit”: 100
+	"usernames": ["joe","jane","bob","bill","george"],
+	"limit": 100
 }
 ```
 
