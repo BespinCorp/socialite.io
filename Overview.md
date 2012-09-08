@@ -12,4 +12,4 @@ Server-load is the responsibility of the *publisher*.
 
 For the purposes of these specs, we will refer to a ‘sharer’ who writes posts that other people read, a ‘follower’ who reads posts written by someone else, and an ‘interactor’ who @-messages or @-replies to a message.
 
-The ‘sharer’s url will be <user-url>.
+The ‘sharer’s url will be ‘‘‘<user-url>‘‘‘.
