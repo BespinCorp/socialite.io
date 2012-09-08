@@ -1,21 +1,15 @@
-“follow me” “message me” “view my profile” spec(s):
+Protocols Overview/Definitions:
+The protocol is designed to be highly decentralized, and distributed. Basic functionality should be specified but latitude should be available to provide variable, different implementations, so long as they all obey the core specification.
 
-In an ideal world - URI protocol spec would be used here - ```soc:profile:http://lkjlkjlkjlkjlkjsdfa```, ```soc:follow:http://lkasdjfalksdjflaksdj``` ```soc:post:http://lakjdfalskdjfalkdjf```
+The bulk of all access is likely to be internet-connected devices like phones and tablets, with desktop computers being second (and probably diminishing over time, though never completely disappearing).
 
-But that won’t work right now. At all. What about...
+People are URL’s: http://twitter.com/uberbrady or http://uberbrady.com
 
-```html
-<object type=”x-socialite-io/socialstuff” data=”soc:profile:http://lskdjflskdjflksdjf”>
-<iframe src=’’>
-</iframe>
-</object>
-```
+The protocol is all built on top of HTTP/1.1. Clients should expect HTTP-style redirects (and follow them) and the like (HTTP Authentication challenges, too). ???Or, possibly, authentication challenges to present to the user (text/html content)?
+‘Following’, graph-wise, is unidirectional. (Some servers MAY wish to only share information with bi-directional friends).
 
-or perhaps something simpler - 
+Server-load is the responsibility of the *publisher*
 
-```html
-<a href='http://socialite.io/follow/http://desk.nu/test_user'
-data-poofiddle='fribblefrotz'>Follow Me!</a>
-```
+For the purposes of these specs, we will refer to a ‘sharer’ who writes posts that other people read, a ‘follower’ who reads posts written by someone else, and an ‘interactor’ who @-messages or @-replies to a message.
 
-maybe with an optional ```<script src=’http://socialite.io/something.js’>``` that makes that linkie thing more cool?
+The ‘sharer’s url will be <user-url>.
