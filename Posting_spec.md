@@ -21,17 +21,19 @@ If the reader wants to check validity of the message, it may check the provision
 
 Decrypting the 'signature' using the public key should result in the same as the following hash:
 
-```SHA256(date\0digest\0recipient\0sender\0url\0)```
+```
+SHA256(date\0digest\0recipient\0sender\0url\0)
+```
 
 (Fields are concatenated in alphabetic order, with Ascii NUL characters in between).
 
 If the signature is correct, and the reader wants to look at the contents of the message, it may fetch the url. After applying a digest function to the resulting message, it should match the 'digest' of the originally posted message.
 
-Anti-Spam provisions: 
+#Anti-Spam provisions: 
 
-Forcing the sender to do the cryptography, and forcing the sender to hold on to the message (and continue hosting the message) are antispam provions.
+Forcing the sender to do the cryptography, and forcing the sender to hold on to the message (and continue hosting the message) are antispam provisions.
 
-Message post recipients may also employ a blacklist for poster's socialite.io addresses, sender's IP addresses.
+Message post recipients may also employ a blacklist for poster's socialite.io addresses, and possibly another for sender's IP addresses.
 
 
 
