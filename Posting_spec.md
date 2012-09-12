@@ -1,4 +1,3 @@
-Public Post (wall post/@-message) spec:
 a User (the ‘interactor’) may Post a message to another user (the ‘recipient’) at the recipient’s post-URL, specified in the ‘userdata.’ The post-URL may be time-limited. If the ‘interactor’ already follows the recipient, he will have a key from the follow action, and *MUST* Post the message using that key.
 <Need non-follower Post protocol>
 <easy to extend to ‘private message’/DM/fb-message’ style interaction?>

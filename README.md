@@ -1,3 +1,5 @@
+Note that due to the modularity of the specifications, a 'publisher' might not be the same as a 'reader'. You could publish using one software stack, and read messages using another.
+
 Start with the Protocol Overview.
 
 The User Spec will probably be the first thing you'll have to work with to build a reader or publisher app.

@@ -1,0 +1,12 @@
+<?php
+// CHANGE THESE SETTINGS
+$username=""; //SET A USERNAME HERE
+$password=""; //SET A PASSWORD HERE
+
+$pagesize=3; //max posts per page
+
+$base_url="PUT BASE URL HERE"; //e.g. http://localhost/socialite.io/example/
+date_default_timezone_set("US/Eastern");
+//END CONFIG SETTINGS
+
+?>
