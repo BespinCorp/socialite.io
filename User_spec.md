@@ -12,8 +12,7 @@ The linked-to document is a JS file looks as follows:
 	"feed": "<feed-URL>",
 	"post": "<post-URL>",
 	"friendlist": "friendlist-URL",
-	"username": "http://sldkfj/lkjsdf",
-	"username": "http://slkdjf/laksjdf",
+	"usernames": ["http://sldkfj/lkjsdf","http://slkdjf/laksjdf"],
 	"publickey": "baclkjsdflkasflkasjdgasldkjfalsdkfjaslfghasdvnzxasdlkfjwelrkjadf"
 }
 ```
