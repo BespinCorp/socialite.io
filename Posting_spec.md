@@ -24,7 +24,9 @@ Message Post Format:
 ```
 
 The body-digest hash is defined as follows:
-```BCRYPT(<recip-URL>\0message-contents)```
+```
+BCRYPT(<recip-URL>\0message-contents)
+```
 
 Bcrypt is chosen as the default hashing algorithm to deliberately cause a small technical cost to the message transmission - making spamming less cost-effective.
 
