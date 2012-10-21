@@ -1,4 +1,3 @@
-Protocols Overview/Definitions:
 The protocol is designed to be highly decentralized, and distributed. Basic functionality should be specified but latitude should be available to provide variable, different implementations, so long as they all obey the core specification.
 
 The bulk of all access is likely to be internet-connected devices like phones and tablets, with desktop computers being second (and probably diminishing over time, though never completely disappearing).

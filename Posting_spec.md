@@ -33,12 +33,12 @@ Predefined channels are: follow-notification, public, and private. Public and pr
 Decrypting the 'signature' using the public key should result in the same as the following hash:
 
 ```
-SHA256(body-digest\0date\0recipient\0sender\0url\0)
+SHA256(body-digest\0date\0recipient\0sender\0url)
 ```
 
 (Fields are concatenated in alphabetic order, with Ascii NUL characters in between).
 
-If the signature is correct, and the reader wants to look at the contents of the message, it may fetch the url. After applying a digest function to the resulting message, it should match the 'digest' of the originally posted message.
+If the signature is correct, and the reader wants to look at the contents of the message, it may fetch the url. After applying a digest function to the resulting message, it should match the 'digest' of the originally posted message. The request for that URL SHOULD be authenticated as a signed request using the recipient's public key. If a recipient wanted to ensure that an allegedly private message was actually private, it may try to request the URL without authentication (ensuring it receives an error).
 
 #Anti-Spam provisions: 
 

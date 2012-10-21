@@ -8,13 +8,13 @@ A feed is a JSON object of posts as follows:
 	"continuation-url": "http://<somedomain>/path/element/?nexttoken=abcdefg",
 	"posts": [
 		{
-			"id": "some_unique_identifer_for_this_server",
+			"url": "some_unique_identifer_for_this_server",
 			"username": "http://<user-service-URL>",
 			"time": "2012-09-03T01:00:12Z",
 			"text": "I am eating a sandwich"
 		},
 		{
-			"id": "another_unique_id",
+			"url": "another_unique_id",
 			"username": "http://<user-service-URL>",
 			"time": "2012-09-03T00:00:13Z",
 			"text": "I am going to eat a sandwich"
@@ -23,9 +23,18 @@ A feed is a JSON object of posts as follows:
 }
 ```
 
-Each entry must consist of at least a "username," "time" and “text”, and "id" elements. Additional supported elements will be specified in the appendix. Extension elements must be prepended with “x-”. Unrecognized elements *SHOULD* be ignored.
+Each entry must consist of at least a "username," "time" and “text”, and "url" elements. Additional supported elements will be specified in the appendix. Extension elements must be prepended with “x-”. Unrecognized elements *SHOULD* be ignored.
 
-ID's must be unique for each server-regardless even relative to usernames. So the combination of server-URL and post ID will be globally unique.
+URL's for each individual message must be unique, and a GET to that URL should retrieve the JSON blob for the message:
+
+```js
+{
+	"url": "another_unique_id",
+	"username": "http://<user-service-URL>",
+	"time": "2012-09-03T00:00:13Z",
+	"text": "I am going to eat a sandwich"
+}
+```
 
 (optional) A feed resource *MAY* return a 307 (temporary redirect) message if a client has made too many requests of the server. A feed resource SHOULD NOT return this upon the first request. The client should take the provided location: url as a batch-fetch URL, and should assemble all usernames (other than the ones previously retrieved) into a JSON array, then POST that array to the given batch-fetch URL. The client *SHOULD* set a ‘limit’ as part of its request, but the server will set one if the client does not. (Should this be 300 status instead? It’s moving from GET to POST and all kinds of other things are happening.) If the feed resource does not support batch-fetch, it should never return this status.
 
