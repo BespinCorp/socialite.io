@@ -1,11 +1,9 @@
-Note that due to the modularity of the specifications, a 'publisher' might not be the same as a 'reader'. You could publish using one software stack, and read messages using another.
+The specification is designed to be the bare minimum required to enable wire-compatible social network interoperation. As such, many features are left unspecified.
 
-Start with the Protocol Overview.
+The main features are: the user specification, the feed specification, and the post specification.
 
-The User Spec will probably be the first thing you'll have to work with to build a reader or publisher app.
+Additionally, we define an optional file format for a 'friendlist' which may be used as a native representation of a 'frends/followers list' or as an export/import/backup format for specifying one's own social network.
 
-The Friendlist spec will be necessary for readers, and will have some key information necessary for publishers.
+We also define an optional "Web Specification" for a unified way of presenting Socialite.io protocol-compatible users to the end-user when viewing a web page.
 
-The Feed Spec is the primary way of accessing a user's feed. Aggregating together various feeds for your various friends will be the primary way to display 'friend activity.'
-
-The Posting spec will probably be the most complicated - it's basically a send/receive protocol. This will allow you to post to other people's feeds, and (depending on your social networking provider) possibly your own.
+The next, and probably the most important, part of the protocol is the Authorization/Authentication part - and that's listed in the A-star-n document.
