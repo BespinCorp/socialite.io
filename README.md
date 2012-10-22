@@ -1,4 +1,4 @@
-The specification is designed to be the bare minimum required to enable wire-compatible social network interoperation. As such, many features are left unspecified.
+The specification is designed to be the bare minimum required to enable wire-compatible social network interoperation. It is a specification of (mostly) server-to-server interactions. As such, many features are left unspecified.
 
 The main features are: the user specification, the feed specification, and the post specification.
 
